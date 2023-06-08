@@ -1,21 +1,32 @@
 import java.util.Scanner;
-class PalindromeString{
+class Palindrome{
 public static void main(String args[]){
 Scanner sc=new Scanner(System.in);
-String n;
-String rs="";
-System.out.print("Enter a String:");
-n=sc.next();
-int len=n.length()-1;
-for(int i=len;i>=0;i--){
-rs=ps+n.charAt(i); 
-}
-System.out.println(rs);
-if(n==rs)
+String strobj=sc.nextLine();
+//strobj=strobj.toUpperCase();
+String temp="";
+int ascii;
+for(int i=strobj.length()-1;i>=0;i--)
 {
-System.out.println("Palindrome");
+if(strobj.charAt(i)>='a' && strobj.charAt(i)<='z')
+{ ascii=strobj.charAt(i);
+ascii-=32;
+temp=temp+(char)ascii;
 }
-else{
-System.out.println("Not a Palindrome");
+else
+{ temp=temp+strobj.charAt(i);}
+}
+System.out.println("temp:"+temp);
+strobj=temp;
+String rev="";
+for(int i=strobj.length()-1;i>=0;i--){rev=rev+strobj.charAt(i);}
+if(strobj.equals(rev))
+{
+System.out.println("YES");
+}
+else
+{
+System.out.println("NO");
+}
 }
 }
