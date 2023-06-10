@@ -1,17 +1,17 @@
 class Animal{
-void eat(){System.out.println("eating...");}
+String color="White";
 }
 class Dog extends Animal{
-void bark(){System.out.println("barking...");}
+String color="black";
+void printColor(){
+System.out.println(color);
+System.out.println(super.color);
 }
-class BabyDog extends dog{
-void weep(){System.out.println("weeping...");}
 }
-class Testinheritance2{
+class TestSuper1{
 public static void main(String args[]){
-BabyDog d=new BabyDog();
-d.weep();
-d.bark();
-d.eat();
+Dog d=new Dog();
+d.printColor();
 }
 }
+
