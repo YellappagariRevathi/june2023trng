@@ -1,6 +1,6 @@
 import java.io.*;
-public class A{
-public static void main(String args[])throws Exception{
+public class BufferedReaderExample{
+public static void main(String args[]){
 InputStreamReader r=new InputStreamReader(System.in);
 BufferedReader br=new BufferedReader(r);
 System.out.println("Enter your name");
