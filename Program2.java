@@ -1,11 +1,12 @@
-class Cal extends Thread{
+class Ex{
 public static void main(String args[]){
-Cal obj=new Cal();
-Thread threadobj=new Thread(obj);
-threadobj.start();
-System.out.println("Threads inside main are very much helpful in java");
-}
-public void run(){
-System.out.println("Threads from overridden rum method are  useful");
+//int a=50/0;
+//String s=null;
+//System.out.println(S.length());
+/*String s="abc";
+int i=Integer.parseInt(s);
+*/
+int a[]=new int[5];
+a[10]=50;
 }
 }

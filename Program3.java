@@ -1,31 +1,13 @@
-class First implements Runnable{
-Thread t;
-First(){
-t=new Thread(this,"NEW");
-System.out.println("CHILD:"+t);
-t.start();
+class TryCatchExample2 {  
+public static void main(String[] args) {  
+try  
+{  
+int data=50/0; //may throw exception   
+}  
+catch(ArithmeticException e)  
+{  
+System.out.println(e);  
+}  
+System.out.println("rest of the code");  
 }
-public void run(){
-try{for(int i=5;i>0;i--){
-System.out.println("CHILD:"+i);
-Thread.sleep(500);
-}
-}
-catch(InterruptedException e){ }
-System.out.println("EXTING CHILD");
-}
-}
-class Second{
-public static void main(String args[])throws Exception{
-new First();
-try{
-for(int i=5;i>0;i--)
-{
-System.out.println("MAIN:"+i);
-Thread.sleep(1000);
-}
-}
-catch(Exception e){ }
-System.out.println("Exting main");
-}
-}
+} 

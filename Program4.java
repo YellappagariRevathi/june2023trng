@@ -1,30 +1,16 @@
-class First implements Runnable{
-Thread t;String S;
-First(String Name){
-S=Name;
-t=new Thread(this, S);
-System.out.println("CHILD:"+t);
-t.start();
-}
-public void run(){
-try{for(int i=5;i>0;i--){
-System.out.println(S+":"+i);
-Thread.sleep(1000);
-}
-}
-catch(InterruptedException e){ }
-System.out.println("EXTING"+S);
+class TryCatchExample3 {  
+public static void main(String[] args) {  
+try  
+{  
+int data=50/0; //may throw exception   
+// if exception occurs, the remaining statement will not exceute  
+System.out.println("rest of the code");  
+}  
+// handling the exception   
+catch(ArithmeticException e)  
+{  
+System.out.println(e);  
 }
 }
-class Second{
-public static void main(String args[])throws Exception{
-new First("ONE");
-new First("TWO");
-new First("THREE");
-try{
-Thread.sleep(20000);
-}
-catch(InterruptedException e){ }
-System.out.println("EXTING MAIN");
-}
-}
+
+}  
