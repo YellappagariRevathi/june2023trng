@@ -1,12 +1,16 @@
-import java.util.StringTokenizer;    
- class StringTokenizer2  
-{    
- public static void main(String args[])  
- {    
-   StringTokenizer st = new StringTokenizer("Hello everyone I am a Java developer"," ");    
-     while (st.hasMoreElements())   
-     {    
-         System.out.println(st.nextToken());    
-     }    
- }    
-}  
+class Student{
+public int id;
+public String name;
+private void display(){
+System.out.println(this.id+" "+this.name);
+}
+}
+class Test{
+public static void main(String args[]){
+Student ob=new Student();
+ob.display();
+ob.id=25841;
+ob.name="Revathi";
+ob.display();
+}
+}

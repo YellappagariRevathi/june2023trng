@@ -1,21 +1,17 @@
-import java.io.FileNotFoundException;  
-import java.io.PrintWriter;  
-  
- class TryCatchExample10 {  
-  
-    public static void main(String[] args) {  
-          
-          
-        PrintWriter pw;  
-        try {  
-            pw = new PrintWriter("jtp.txt"); //may throw exception   
-            pw.println("saved");  
-        }  
-// providing the checked exception handler  
- catch (FileNotFoundException e) {  
-              
-            System.out.println(e);  
-        }         
-    System.out.println("File saved successfully");  
-    }  
+class Student{
+public int id;
+public String name;
+private void display(){
+System.out.println(this.id+" "+this.name);
+}
+public void displayStudent(){display();}
+{  id=481;name="DhanaLakshmi" ;}
+}
+class Test{
+public static void main(String args[]){
+Student ob1=new Student();
+ob1.displayStudent();
+Student ob2=new Student();
+
+ob2.displayStudent();}
 }

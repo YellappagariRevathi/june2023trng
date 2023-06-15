@@ -1,23 +1,10 @@
-class ChildThread extends Thread{
-public void run(){
-for(int i=1;i<=4;i++)
-{
-try
-{
-Thread.sleep(500);
-}catch(Exception e){
-System.out.println(e);
+interface Printable{
+void print();
 }
-System.out.println("child thread execution-"+i);
-}
-}
-} 
-class Test{
-public static void main(String args[]) throws Exception{
-ChildThread th1=new 
-ChildThread();
-th1.start();
-th1.join();
-System.out.println("main thread completed");
+class A implements Printable{
+public void print(){System.out.println("Hello");}
+public static void main(String args[]){
+A obj=new A();
+obj.print();
 }
 }

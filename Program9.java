@@ -1,16 +1,16 @@
-import java.util.Arrays;  
- class ReturnArrayExample1  
-{  
-
-public static int[] numbers()  
-{  
-int[] arr={5,6,7,8,9};  //initializing array  
-return arr;  
-}  
+class Student{
+public int id;
+public String name;
+private void display(){
+System.out.println(this.id+" "+this.name);
+}
+}
+class Test{
 public static void main(String args[]){
-int[] a=numbers();
-for(int i=0;i<a.length;i++)
-System.out.print(a[i]+" ");
+Student ob=new Student();
+ob.display();
+ob.id=25841;
+ob.name="Revathi";
+ob.display();
 }
 }
-

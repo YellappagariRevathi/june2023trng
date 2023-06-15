@@ -1,20 +1,27 @@
 class Student{
-int rollno;
-String name;
-static String college="ITS";
-Student(int r,String n){
-rollno=r;
-name=n;
+private String name;
+private int age;
+private String getName(){return this.name;}
+private int getAge(){return this.age;}
+private void setName(String name){
+if(name.length()>0)
+this.name=name;
+else System.out.println("Name cant be empty");
 }
-void display(){System.out.println(rollno+" "+name+" "+college);
+private void setAge(int age){this.age=age;}
+public void display(){
+System.out.println(getName()+","+getAge());
+}
+public void inputStudentDetails(String n,int a){
+setName(n);setAge(a);
 }
 }
-public class TestStaticVariable1{
+class Test{
 public static void main(String args[]){
-Student s1=new Student(111,"revathi");
-Student s2=new Student(222,"rev");
-Student.college="A.M.REDDY";
-s1.display();
-s2.display();
+Student obs1=new Student();
+obs1.inputStudentDetails("Revathi",19);
+Student obs2=new Student();
+obs2.inputStudentDetails("",18);
+obs1.display();
 }
 }

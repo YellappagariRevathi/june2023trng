@@ -1,7 +1,10 @@
-class Add{
-public static void main(String abc[]){
-int sum=0;
-for(String i:abc)sum+=Integer.parseInt(i);
-System.out.println(sum);
+
+package pl;  
+import java.util.*;
+class ECE{ 
+public void mahesh(){ 
+public static void main(String args[]){  
+System.out.println("Welcome to package");  
 }
 }
+} 

@@ -1,9 +1,15 @@
-class ThreadGroupDemo implements runnable{
-public void run(){
-System.out.println(Thread.currentThread().getName());
+interface Drawable{
+void draw();
 }
-public static void main(String args[s]){
-ThreadGroupDemo runnable=new ThreadGroupDemo();
-ThreadGroup tg1=new ThreadGroup("parent ThreadGroup");
-Thread
-t1.start();
+class Rectangle implements Drawable{
+public void draw(){System.out.println("drawing rectangle");}
+}
+class Circle implements Drawable{
+public void draw(){System.out.println("drawing circle");}
+}
+class TestInterface1{
+public static void main(String args[]){
+Drawable d=new Rectangle();
+d.draw();
+}
+}
