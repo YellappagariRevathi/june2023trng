@@ -1,17 +1,13 @@
-class TryCatchExample4 {  
-  
-    public static void main(String[] args) {  
-        try  
-        {  
-        int data=50/0; //may throw exception   
-        }  
-            // handling the exception by using Exception class      
-        catch(Exception e)  
-        {  
-            System.out.println(e);  
-        }  
-        System.out.println("rest of the code");  
-    }  
-      
-}  
-
+class MyThread extends Thread{
+public void run(){
+System.out.println("shut down hook task completed..");
+}
+}
+class TestShutdown1{
+public static void main(String args[])throws Exception{
+Runtime r=Runtime.getRuntime();
+r.addShutdownHook(new MyThread());
+System.out.println("Now main sleeping... press ctrl+c to exit");
+try{Thread.sleep(3000);}catch(Exception e){}
+}
+}

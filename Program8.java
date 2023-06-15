@@ -1,19 +1,12 @@
-class TryCatchExample7 {  
-  
-    public static void main(String[] args) {  
-          
-        try  
-        {  
-        int data1=50/0; //may throw exception   
-  
-        }  
-             // handling the exception  
-        catch(Exception e)  
-        {  
-            // generating the exception in catch block  
-        int data2=50/0; //may throw exception   
-  
-        }  
-    System.out.println("rest of the code");  
-    }  
+import java.util.StringTokenizer;    
+ class StringTokenizer2  
+{    
+ public static void main(String args[])  
+ {    
+   StringTokenizer st = new StringTokenizer("Hello everyone I am a Java developer"," ");    
+     while (st.hasMoreElements())   
+     {    
+         System.out.println(st.nextToken());    
+     }    
+ }    
 }  

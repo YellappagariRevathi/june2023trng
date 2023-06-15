@@ -1,17 +1,16 @@
-class TryCatchExample9 {  
-  
-    public static void main(String[] args) {  
-        try  
-        {  
-        int arr[]= {1,3,5,7};  
-        System.out.println(arr[10]); //may throw exception   
-        }  
-            // handling the array exception  
-        catch(ArrayIndexOutOfBoundsException e)  
-        {  
-            System.out.println(e);  
-        }  
-        System.out.println("rest of the code");  
-    }  
+import java.util.Arrays;  
+ class ReturnArrayExample1  
+{  
+
+public static int[] numbers()  
+{  
+int[] arr={5,6,7,8,9};  //initializing array  
+return arr;  
+}  
+public static void main(String args[]){
+int[] a=numbers();
+for(int i=0;i<a.length;i++)
+System.out.print(a[i]+" ");
 }
-      
+}
+
